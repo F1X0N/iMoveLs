@@ -1,142 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iMoveLs</title>
     <link rel="shortcut icon" href="img/imovi-icon.png" type="image/png">
-    
-    <!--Fonte do projeto (Lato)-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
     <!-- CSS Bootstrap -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!--Ícones do Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    
+
     <!--CSS do projeto-->
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <!-- JavaScript Bootstrap -->
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
-        crossorigin="anonymous"
-        ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 
 
 </head>
+
 <body>
-   
+
     <!--NAVBAR--->
-    <nav class ="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
         <div class="container py-3">
             <a href="" class="navbar-brand primary-color">
                 <img src="img/imovi-icon.png" alt="Ícone clicável com link para a home do site">
                 <span>iMoveLs</span>
             </a>
-            <button class="navbar-toggler" type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbar-items"
-            aria-controls="navbar-items"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
 
-            <i class="bi bi-list"></i>
+                <i class="bi bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbar-items">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active primary-color" aria-current="page">Home</a>
+                        <a href="#slider-container" class="nav-link active primary-color" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item primary-color">
-                        <a href="#" class="nav-link primary-color">Projetos</a>
+                        <a href="#featured-container" class="nav-link primary-color">Projetos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link primary-color">Imóveis</a>
+                        <a href="#infocontainer" class="nav-link primary-color">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link primary-color">Contatos</a>
+                        <a href="#footer" class="nav-link primary-color">Contatos</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>  
+    </nav>
     <!-- SLIDER -->
-    <div class="container" id="slider-container">
+    <section class="container" id="slider-container">
         <div class="carousel slide" id="slider" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button 
-                    type="button" 
-                    class="active" 
-                    data-bs-target="#slider" 
-                    data-bs-slide-to="0"
-                    aria-current="true"
+                <button type="button" class="active" data-bs-target="#slider" data-bs-slide-to="0" aria-current="true"
                     aria-label="Slide 1">
                 </button>
-                <button 
-                    type="button" 
-                    data-bs-target="#slider" 
-                    data-bs-slide-to="1"
-                    aria-label="slide 2">
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="slide 2">
                 </button>
-                <button 
-                    type="button"  
-                    data-bs-target="#slider" 
-                    data-bs-slide-to="2"
-                    aria-label="slide 3">
+                <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="slide 3">
                 </button>
             </div>
             <div class="carousel-inner ">
-                <div class="carousel-item active">
+                <div class="carousel-item d-flex justify-content-center align-items-center flex-column  active">
                     <img src="img/banner-1.jpg" alt="Casa de dois andares com piscina em frente" class="d-block w-100
                     ">
-                    <div class="carousel-caption">
+                    <div class="carousel-caption complement-carroussel">
                         <h5>Casas Planejadas</h5>
                         <a href="#" class="btn btn-dark"> Ver Estande</a>
                     </div>
                 </div>
-                <div class="carousel-item ">
+                <div class="carousel-item d-flex justify-content-center align-items-center flex-column  ">
                     <img src="img/banner-2.jpg" alt="Casa com fachada de vidro e piscina" class="d-block w-100">
-                    <div class="carousel-caption">
+                    <div class="carousel-caption complement-carroussel">
                         <h5>Projetos Complexos</h5>
                         <a href="#" class="btn btn-dark"> Realize seu sonho</a>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item d-flex justify-content-center align-items-center flex-column ">
                     <img src="img/banner-3.jpg" alt="Casa com Jardin" class="d-block w-100
                     ">
-                    <div class="carousel-caption">
+                    <div class="carousel-caption complement-carroussel">
                         <h5>Planos Inovadores</h5>
                         <a href="#" class="btn btn-dark"> Abra sua mente</a>
                     </div>
                 </div>
             </div>
-            <button 
-            class="carousel-control-prev" 
-            type="button" 
-            data-bs-target="#slider" 
-            data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
 
-            <i class="bi bi-chevron-compact-left"></i>
-            <span class="visually-hidden">Previous</span>
+                <i class="bi bi-chevron-compact-left"></i>
+                <span class="visually-hidden">Previous</span>
             </button>
 
-            <button 
-            class="carousel-control-next" 
-            type="button" 
-            data-bs-target="#slider" 
-            data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
 
-            <i class="bi bi-chevron-compact-right"></i>
-            <span class="visually-hidden">Next</span>
+                <i class="bi bi-chevron-compact-right"></i>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
         <!--MINI BANNERS-->
@@ -181,9 +149,9 @@
             </div>
 
         </div>
-    </div>
+    </section>
     <!--DESTAQUES-->
-    <div class="container" id="featured-container">
+    <section class="container" id="featured-container">
         <div class="col-12">
             <h2 class="title primary-color">Trabalhos em Destaque</h2>
             <p class="subtitle secondary-color">Conheça nossos projetos mais desafiadores</p>
@@ -191,54 +159,53 @@
         <div class="col-12" id="featured-images">
             <div class="row g-4">
                 <div class="col-12 col-md-4">
-                    <img src="img/project-1.jpg" alt="Cozinha com design moderno e vista para o quintal" class="img-fluid">
+                    <img src="img/project-1.jpg" alt="Cozinha com design moderno e vista para o quintal"
+                        class="img-fluid">
                     <div class="banner-content">
-                        <p class="secondary-color">Categoria</p>
-                        <h3>Nome do Projeto</h3>
+                        <p class="secondary-color">Móveis planejados</p>
+                        <h3>Cozinha Planejada</h3>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <img src="img/project-2.jpg" alt="Vista de fora de um prédio braco moderno" class="img-fluid">
+                    <img src="img/project-2.jpg" alt="Vista de fora de um prédio branco moderno" class="img-fluid">
                     <div class="banner-content">
-                        <p class="secondary-color">Categoria</p>
-                        <h3>Nome do Projeto</h3>
+                        <p class="secondary-color">Edifícios</p>
+                        <h3>Prédios residenciais</h3>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <img src="img/project-3.jpg" alt="Sala de estar com escada para o segundo andar" class="img-fluid">
                     <div class="banner-content">
-                        <p class="secondary-color">Categoria</p>
-                        <h3>Nome do Projeto</h3>
+                        <p class="secondary-color">Móveis planejados</p>
+                        <h3>Sala aconchegante</h3>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <img src="img/project-4.jpg" alt="Escada amadeirada com detalhes pretos" 
-                    class="img-fluid">
+                    <img src="img/project-4.jpg" alt="Escada amadeirada com detalhes pretos" class="img-fluid">
                     <div class="banner-content">
-                        <p class="secondary-color">Categoria</p>
-                        <h3>Nome do Projeto</h3>
+                        <p class="secondary-color">Construções personalizadas</p>
+                        <h3>Luz para sua vida</h3>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <img src="img/project-5.jpg" alt="Cozinha predominantemente branca" 
-                    class="img-fluid">
+                    <img src="img/project-5.jpg" alt="Cozinha predominantemente branca" class="img-fluid">
                     <div class="banner-content">
-                        <p class="secondary-color">Categoria</p>
-                        <h3>Nome do Projeto</h3>
+                        <p class="secondary-color">Móveis planejados</p>
+                        <h3>Cozinha Light</h3>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <img src="img/project-6.jpg" alt="Tres casas similares uma ao lado da outra" class="img-fluid">
                     <div class="banner-content">
-                        <p class="secondary-color">Categoria</p>
-                        <h3>Nome do Projeto</h3>
+                        <p class="secondary-color">Condomínios</p>
+                        <h3>Condomínio nova alvorada</h3>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!--INFO-->
-    <div class="container" id="infocontainer">
+    <section class="container" id="infocontainer">
         <div class="col-12">
             <h2 class="title primary-color">Detalhes Importante</h2>
             <p class="subtitle secondary-color">Saiba mais sobre a experiência da nossa querida equipe</p>
@@ -252,7 +219,9 @@
                     <div class="row">
                         <div class="col-12">
                             <h2 class="title primary-color">Os dados que fazem a diferença</h2>
-                            <p class="subtitle secondary-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fugiat consequuntur laudantium, vitae unde id iste laborum distinctio nobis odit molestias maiores dicta rerum quae et a, soluta, sint labore!</p>
+                            <p class="subtitle secondary-color">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Suscipit fugiat consequuntur laudantium, vitae unde id iste laborum distinctio nobis
+                                odit molestias maiores dicta rerum quae et a, soluta, sint labore!</p>
                         </div>
                         <div class="col-12" id="info-numbers">
                             <div class="row">
@@ -266,7 +235,7 @@
                                 </div>
                                 <div class="col-4">
                                     <h3 class="primary-color">168</h3>
-                                    <p class="secondary-color">CLientes</p>
+                                    <p class="secondary-color">Clientes</p>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +246,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- FOOTER -->
     <footer class="container-fluid bg-dark-color" id="footer">
         <div class="container">
@@ -285,7 +254,9 @@
                 <!--FOOTER TOP-->
                 <div class="col-12" id="footer-top">
                     <div class="row justify-content-between">
-                        <div class="col-4"><h2>iMoveLs</h2></div>
+                        <div class="col-4">
+                            <h2>iMoveLs</h2>
+                        </div>
                         <div class="col-4" id="social-icons">
                             <i class="bi bi-facebook"></i>
                             <i class="bi bi-instagram"></i>
@@ -296,42 +267,41 @@
                 </div>
                 <!--FOOTER DETAILS-->
                 <div class="COL-12" id="footer-details"></div>
-                    <div class="row">
-                        <div class="col12 col-md-4" id="news-container">
-                            <h4>Fique por dentro das novidades</h4>
-                            <p class="secondary-color">Inscreva-se para saber de tudo em primeira mão</p>
-                            <form>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Digite o seu e-mail">
-                                </div>
-                                <button class="btn btn-dark" type="submit">Inscrever-se</button>
-                            </form>
-                        </div>
-                        <div class="col-12 col-md-4" id="contact-container">
-                            <h4>Meios de COntato</h4>
-                            <p class="secondary-color">(99)99999-9999</p>
-                            <p class="secondary-color">contato@imovels.com</p>
-                        </div>
-                        <div class="col-12 col-md-4" id="links-container">
-                            <div class="row">
-                                <h4>Você pode estar procurando por:?</h4>
-                                <div class="col-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="secondary-color">Projetos</a></li>
-                                        <li><a href="#" class="secondary-color">Imóveis</a></li>
-                                        <li><a href="#" class="secondary-color">Vendas</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#" class="secondary-color">Contratar</a></li>
-                                        <li><a href="#" class="secondary-color">Trabalhe conosco</a></li>
-                                        <li><a href="#" class="secondary-color">Contratar</a></li>
-                                    </ul>
-                                </div>
+                <div class="row">
+                    <div class="col12 col-md-4" id="news-container">
+                        <h4>Fique por dentro das novidades</h4>
+                        <p class="secondary-color">Inscreva-se para saber de tudo em primeira mão</p>
+                        <form action="https://formsubmit.co/21fa9448254505d25fb3693d68b488bc" method="post">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Digite o seu e-mail">
+                            </div>
+                            <button class="btn btn-dark" type="submit">Inscrever-se</button>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-4" id="contact-container">
+                        <h4>Meios de Contato</h4>
+                        <a class="secondary-color text-decoration-none" href="https://josivan-amorim.vercel.app/">Josivan Amorim</a>
+                    </div>
+                    <div class="col-12 col-md-4" id="links-container">
+                        <div class="row">
+                            <h4>Você pode estar procurando por:</h4>
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="secondary-color">Projetos</a></li>
+                                    <li><a href="#" class="secondary-color">Imóveis</a></li>
+                                    <li><a href="#" class="secondary-color">Vendas</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="secondary-color">Contratar</a></li>
+                                    <li><a href="#" class="secondary-color">Trabalhe conosco</a></li>
+                                    <li><a href="#" class="secondary-color">Contratar</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
                 <!--FOOTER BOTTOM-->
                 <div class="col-12" id="footer-bottom">
                     <div class="row justify-content-between">
@@ -347,4 +317,5 @@
         </div>
     </footer>
 </body>
+
 </html>
